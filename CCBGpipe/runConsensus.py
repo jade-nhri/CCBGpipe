@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 import subprocess
 import sys, os
 fast5dir=sys.argv[1]
