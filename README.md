@@ -30,19 +30,32 @@ Installation
 
 ``export PATH="$PATH:/opt/CCBGpipe/CCBGpipe/"``
 
+## Dependencies
 
- > Before installing medaka it may be required to install some
+- [Albacore 2.1.7]
+- [Canu v1.6](http://canu.readthedocs.io)
+- [samtools 1.7](http://www.htslib.org/)
+- [BWA-0.7.17](http://bio-bwa.sourceforge.net)
+- [cmake](h/cmkttps://cmake.org/)
+- [racon v1.1.1](https://github.com/isovic/racon) - the pipeline will download and build it
+- [minimap 2.10](https://github.com/lh3/minimap2) and [miniasm v0.2](https://github.com/lh3/miniasm)
+- [nanopolish v0.9.0](https://github.com/jts/nanopolish)
+- [Graphmap v0.3.0] (https://github.com/isovic/graphmap)
+
+
+ > Before installing these dependencies it may be required to install some
  > prerequisite libraries, best installed by a package manager. On Ubuntu
  > theses are:
- > * gcc
- > * zlib1g-dev
- > * libbz2-dev
  > * liblzma-dev
- > * libffi-dev
- > * libncurses5-dev
+ > * libbz2-dev
+ > * libz-dev
+ > * libncurses-dev
  > * libcurl4-gnutls-dev
  > * libssl-dev
  > * make
  > * wget
  > * python3-all-dev
- > * python-virtualenv
+ > * parallel
+ > * networkx
+ > * pandas
+ > * pyfastaq
