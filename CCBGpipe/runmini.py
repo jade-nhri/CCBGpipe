@@ -47,13 +47,13 @@ for i in mydir:
         #print (comm)
         stdout=subprocess.getoutput(comm)
         print (stdout)
-
-
+        
+        comm='rm mapreads.paf assembly*.gfa'
+        subprocess.getoutput(comm)
 
         os.chdir('../')
         print ('\n')
-        comm='rm mapreads.paf assembly*.gfa'
-        subprocess.getoutput(comm)
+
 
 comm="date '+%Y-%m-%d %H:%M:%S'"
 print ('Finish at '+subprocess.getoutput(comm))
