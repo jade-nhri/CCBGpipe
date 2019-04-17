@@ -1,8 +1,7 @@
 # CCBGpipe
 This pipeline is designed to complete circular bacterial genomes using a sampling strategy from a sinlge MinION with barcoding
 
-Installation
-------------
+
 **To run with Docker**
 
 ``wget https://sourceforge.net/projects/sb2nhri/files/CCBGpipe/Dockerfile``
@@ -18,6 +17,8 @@ Installation
         add-apt-repository ppa:webupd8team/java
         apt-get update && apt-get install oracle-java8-installer
 
+Installation
+------------
 **Installation from source**
 
 ``cd /opt``
@@ -36,16 +37,16 @@ Installation
 - [Canu v1.6](http://canu.readthedocs.io)
 - [samtools 1.7](http://www.htslib.org/)
 - [BWA-0.7.17](http://bio-bwa.sourceforge.net)
-- [cmake](h/cmkttps://cmake.org/)
-- [racon v1.1.1](https://github.com/isovic/racon) - the pipeline will download and build it
+- [racon v1.1.1](https://github.com/isovic/racon) -
 - [minimap 2.10](https://github.com/lh3/minimap2) and [miniasm v0.2](https://github.com/lh3/miniasm)
 - [nanopolish v0.9.0](https://github.com/jts/nanopolish)
-- [Graphmap v0.3.0] (https://github.com/isovic/graphmap)
+- [Graphmap v0.3.0](https://github.com/isovic/graphmap)
 
 
  > Before installing these dependencies it may be required to install some
  > prerequisite libraries, best installed by a package manager. On Ubuntu
  > theses are:
+ > * cmake
  > * liblzma-dev
  > * libbz2-dev
  > * libz-dev
