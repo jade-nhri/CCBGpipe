@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 import random, sys
 import numpy as np
 infile=sys.argv[1]
