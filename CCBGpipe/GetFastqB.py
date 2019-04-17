@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 import sys, os, subprocess
 import pandas as pd
 import numpy as np
