@@ -21,7 +21,14 @@ Installation
 **Installation from source**
 
 ``cd /opt``
-``git clone ``
+
+``git clone https://github.com/jade-nhri/CCBGpipe.git``
+
+``cd CCBGpipe/CCBGpipe``
+
+``chmod +x *.py``
+
+``export PATH="$PATH:/opt/CCBGpipe/CCBGpipe/"``
 
 
  > Before installing medaka it may be required to install some
