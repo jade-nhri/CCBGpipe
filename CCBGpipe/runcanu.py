@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 import sys, subprocess
 import os
 Nrun=5    #How many times for assembling 40X-sampling reads
