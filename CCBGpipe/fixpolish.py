@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 import subprocess
 import os, sys
 label=sys.argv[1]
