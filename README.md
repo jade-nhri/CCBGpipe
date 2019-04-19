@@ -19,6 +19,14 @@ Since CCBGpipe implements many analytical tools, we strongly recommend you to ru
         add-apt-repository ppa:webupd8team/java
         apt-get update && apt-get install oracle-java8-installer
 
+    Please note: the Oracle JDK license has changed starting April 16, 2019. You can download [zulu](https://www.azul.com/downloads/zulu/)
+        apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 0xB1998361219BD9C9
+        apt-add-repository 'deb http://repos.azulsystems.com/ubuntu stable main'
+        echo 'deb http://repos.azulsystems.com/debian stable main' > /etc/apt/sources.list.d/zulu.list
+        apt-get update
+        apt-get install zulu-8
+        
+
 Installation
 ------------
 **Installation from source**
