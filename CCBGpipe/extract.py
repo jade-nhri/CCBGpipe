@@ -4,9 +4,20 @@ import subprocess
 import shutil
 import pandas as pd
 import numpy as np
+import argparse
+
 flowcell='FLO-MIN107'
 kit='SQK-LSK108'
 threads=60
+
+parser = argparse.ArgumentParser()
+parser.add_argument('inpath', help='the path to raw_reads folder')
+parser.add_argument('outpath', help='an output folder')
+parser.add_argument('-flowcell', help='flowcell (default=FLO-MIN107)')
+parser.add_argument('-kit', help='kit (default=SQK-LSK108)')
+parser.add_argument('-t', help='threads (default=60)')
+args = parser.parse_args()
+
 
 argv=sys.argv
 if '-flowcell' in argv:
