@@ -1,6 +1,12 @@
 #!/usr/bin/env python3
 import subprocess
 import sys, os
+import argparse
+
+parser = argparse.ArgumentParser(
+    prog='runmini.py',
+    description='''Please run this in the Run folder!''')
+args = parser.parse_args()
 
 comm="date '+%Y-%m-%d %H:%M:%S'"
 print ('Start at '+subprocess.getoutput(comm))
