@@ -1,6 +1,11 @@
 #!/usr/bin/env python3
 import subprocess
 import sys, os
+import argparse
+
+parser = argparse.ArgumentParser()
+parser.add_argument('inpath', help='the path to the barcoded folder (i.e. fast5)')
+args = parser.parse_args()
 
 comm="date '+%Y-%m-%d %H:%M:%S'"
 print ('Start at '+subprocess.getoutput(comm))
@@ -14,7 +19,7 @@ os.chdir(inpath)
 #mydir=['barcode03']
 mydir=[x for x in os.listdir() if os.path.isdir(x) and 'barcode' in x]
 print (mydir)
-for i in mydir:
+for i in sorted(mydir):
     comm="cat {0}.txt | awk ".format(i)+"'"+"{"+"sum+=$4"+"}"+" END "+"{"+"print sum"+"}"+"'"
     totalbases=int(subprocess.getoutput(comm))
     if (os.path.exists(i+'/assembly.fa')):
