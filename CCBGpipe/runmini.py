@@ -18,7 +18,7 @@ print (mydir)
 for i in mydir:
     if (os.path.isdir(i)):
         os.chdir(i)
-               if os.path.exists('reads.fastq'):
+        if os.path.exists('reads.fastq'):
             print (i+', running minimap and miniasm......')
             comm='minimap2 -x ava-ont -t32 reads.fastq reads.fastq > mapreads.paf'
             #print (comm)
