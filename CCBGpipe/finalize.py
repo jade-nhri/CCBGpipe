@@ -1,8 +1,6 @@
 #!/usr/bin/env python3
 import sys, os
 import subprocess
-outpath=sys.argv[1]
-
 import argparse
 
 parser = argparse.ArgumentParser(
@@ -11,6 +9,8 @@ parser = argparse.ArgumentParser(
 parser.add_argument('outpath', help='the path to output')
 args = parser.parse_args()
 
+outpath=sys.argv[1]
+outpath=os.path.abspath(outpath)
 comm="date '+%Y-%m-%d %H:%M:%S'"
 print ('Start at '+subprocess.getoutput(comm))
 
@@ -61,11 +61,12 @@ for i in mydir:
     subprocess.getoutput(comm)
     if '_' in i:
         i=i.split('_')[0]
-    os.mkdir(outpath+i)
-    comm='cp {0} {1}{2}/'.format(outfile,outpath,i)
+    
+    os.mkdir(os.path.join(outpath,i))
+    comm='cp {0} {1}/{2}/'.format(outfile,outpath,i)
     #print (comm)
     subprocess.getoutput(comm)
-    comm='cp long.bam* {0}{1}/'.format(outpath,i)
+    comm='cp long.bam* {0}/{1}/'.format(outpath,i)
     #print (comm)
     subprocess.getoutput(comm)
 
