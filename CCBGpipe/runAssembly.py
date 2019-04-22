@@ -24,16 +24,21 @@ for i in mydir:
         Ncir=int(subprocess.getoutput(comm))
         print ('Number of circular sequences in assembly.fa: {0}'.format(Ncir))
 
+     if (os.path.exists('assemblyA.fa')):
         comm="grep 'c_' assemblyA.fa | wc -l"
         NcirA=int(subprocess.getoutput(comm))
         print ('Number of circular sequences in assemblyA.fa: {0}'.format(NcirA))
+    else:
+        NcirA=0  
 
+    if (os.path.exists('assemblyB.fa')):
         comm="grep 'c_' assemblyB.fa | wc -l"
         NcirB=int(subprocess.getoutput(comm))
         print ('Number of circular sequences in assemblyB.fa: {0}'.format(NcirB))
- 
+    else:
+        NcirB=0
 
-    if os.path.getsize('readsB.fastq')<os.path.getsize('readsA.fastq'):
+    if os.path.exists('readsA.fastq') and os.path.exists('readsB.fastq') and os.path.getsize('readsB.fastq')<os.path.getsize('readsA.fastq'):
         comm='runcanu.py {0}'.format(gsize)
     else:
         if NcirA>Ncir or NcirB>Ncir or Ncir==NcirA==NcirB:
