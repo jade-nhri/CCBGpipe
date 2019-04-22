@@ -3,6 +3,14 @@ import sys, os
 import subprocess
 outpath=sys.argv[1]
 
+import argparse
+
+parser = argparse.ArgumentParser(
+    prog='runConsensus.py',
+    description='''Please run this in the Run folder!''')
+parser.add_argument('outpath', help='the path to output')
+args = parser.parse_args()
+
 comm="date '+%Y-%m-%d %H:%M:%S'"
 print ('Start at '+subprocess.getoutput(comm))
 
@@ -23,6 +31,9 @@ subprocess.getoutput(comm)
 
 comm='rm dnaa.* repa.* origin.*'
 subprocess.getoutput(comm)
+
+if not os.path.exists(outpath):
+    os.mkdir(outpath)
 
 #mydir=['barcode02','barcode04','barcode12']
 mydir=[x for x in os.listdir() if os.path.isdir(x) and 'barcode' in x]
@@ -61,9 +72,9 @@ for i in mydir:
     comm='cp reads.fastq {0}/{1}'.format(outpath,i)
     print (comm)
     subprocess.getoutput(comm)
-    #comm='cp canu/canu.trimmedReads.fasta {0}/{1}'.format(outpath,i)
-    #print (comm)
-    #subprocess.getoutput(comm)
+    comm='cp fpseq.fa {0}/{1}'.format(outpath,i)
+    print (comm)
+    subprocess.getoutput(comm)
 
     os.chdir('../')
     print ('\n')
