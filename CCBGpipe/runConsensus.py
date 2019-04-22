@@ -1,6 +1,14 @@
 #!/usr/bin/env python3
 import subprocess
 import sys, os
+import argparse
+
+parser = argparse.ArgumentParser(
+    prog='runConsensus.py',
+    description='''Please run this in the Run folder!''')
+parser.add_argument('f5path', help='the path to the barcoded folder (i.e. fast5)')
+args = parser.parse_args()
+
 fast5dir=sys.argv[1]
 cwd=os.getcwd()
 os.chdir(fast5dir)
@@ -67,13 +75,13 @@ for i in mydir:
     subprocess.getoutput(comm)
 
 
-    #comm='rm plished*'
-    #print (comm)
-    #stdout=subprocess.getoutput(comm)
+    comm='rm plished*'
+    print (comm)
+    stdout=subprocess.getoutput(comm)
 
-    #comm='rm nanopolish.results* -rf'
-    #print (comm)
-    #stdout=subprocess.getoutput(comm)
+    comm='rm nanopolish.results* -rf'
+    print (comm)
+    stdout=subprocess.getoutput(comm)
 
     os.chdir(cwd)
 
