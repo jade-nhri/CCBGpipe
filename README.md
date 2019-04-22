@@ -71,3 +71,21 @@ Installation
  > * networkx
  > * pandas
  > * pyfastaq
+
+## Usage
+``extract.py raw_reads albacore``
+
+``mkdir Run && cd Run``
+
+``runGetFastq.py ../albacore/fast5``
+
+``runmini.py``
+
+``runAssembly.py``
+
+``finalize.py ../results``
+
+
+
+
+
