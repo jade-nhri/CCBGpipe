@@ -24,7 +24,7 @@ for i in mydir:
         Ncir=int(subprocess.getoutput(comm))
         print ('Number of circular sequences in assembly.fa: {0}'.format(Ncir))
 
-     if (os.path.exists('assemblyA.fa')):
+    if (os.path.exists('assemblyA.fa')):
         comm="grep 'c_' assemblyA.fa | wc -l"
         NcirA=int(subprocess.getoutput(comm))
         print ('Number of circular sequences in assemblyA.fa: {0}'.format(NcirA))
