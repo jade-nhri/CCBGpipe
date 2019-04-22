@@ -10,7 +10,7 @@ parser = argparse.ArgumentParser(
 comm="date '+%Y-%m-%d %H:%M:%S'"
 print ('Start at '+subprocess.getoutput(comm))
 
-gsize=4000000 #default genome size
+gsize=6000000 #default genome size
 #mydir=['barcode05']
 mydir=[x for x in os.listdir() if os.path.isdir(x) and 'barcode' in x]
 print (mydir)
