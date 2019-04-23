@@ -73,7 +73,7 @@ for i in sumbasesL.index:
         break
 
 set1=fdfL.iloc[0:lineidx1,:]
-set1.to_csv(indexfile+'A',sep='\t')
+set1.to_csv(indexfile+'B',sep='\t')
 set1left=pd.concat([fdfL.iloc[lineidx1:,:],df[df['sequence_length_template']<Lcutvalue]])
 print ('    The minimum quality: {:05.2f} '.format(set1left.iloc[0,4]))
 print ('  Get long read: {:,} bases'.format(total1))
