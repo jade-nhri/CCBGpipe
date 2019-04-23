@@ -89,5 +89,8 @@ for ID in set1['read_id']:
         print (ID)
 fw.close()
 
+comm='rm fastq_runid.fastq'
+subprocess.getoutput(comm)
+
 os.chdir (cwd)
 
