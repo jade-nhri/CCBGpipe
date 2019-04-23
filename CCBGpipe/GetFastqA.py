@@ -68,7 +68,7 @@ for i in sumbasesL.index:
     lineidx1+=1
     total1=int(sumbasesL.ix[i])
     #print (total)
-    if total1 > mintotal*1/2:
+    if total1 > mintotal:
         tempi=i
         break
 
