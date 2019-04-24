@@ -23,4 +23,5 @@ f.close()
 print ('Number of reads: {0}'.format(len(slen)))
 print ('Total bases: {0} bp'.format(np.sum(slen)))
 print ('Mean length: {:0.2f} bp'.format(np.mean(slen)))
-
+print ('Min length: {:0.2f} bp'.format(np.min(slen)))
+print ('Max length: {:0.2f} bp'.format(np.max(slen)))
