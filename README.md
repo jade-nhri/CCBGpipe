@@ -8,6 +8,16 @@ Since CCBGpipe implements many analytical tools, we strongly recommend you to ru
 
 ``wget https://sourceforge.net/projects/sb2nhri/files/CCBGpipe/Dockerfile``
 
+Alternatively,
+
+``cd /opt``
+
+``git clone https://github.com/jade-nhri/CCBGpipe.git``
+
+``cd /opt/CCBGpipe``
+
+
+
 ``docker build -t "ccbgpipe:v1" ./``
 
 ``docker run -h ccbgpipe --name ccbgpipe -t -i -v /:/MyData ccbgpipe:v1 /bin/bash``
