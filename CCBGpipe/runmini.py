@@ -15,7 +15,7 @@ print ('Start at '+subprocess.getoutput(comm))
 mydir=[x for x in os.listdir() if os.path.isdir(x) and 'barcode' in x]
 print (mydir)
 
-for i in mydir:
+for i in sorted(mydir):
     if (os.path.isdir(i)):
         os.chdir(i)
         if os.path.exists('reads.fastq'):
