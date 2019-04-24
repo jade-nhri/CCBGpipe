@@ -17,7 +17,6 @@ RUN git clone https://github.com/jade-nhri/CCBGpipe.git
 WORKDIR /opt/CCBGpipe/CCBGpipe
 RUN chmod +x *.py
 
-
 #albacore 2.1.7
 #This software requires the user to download manually!!!
 
