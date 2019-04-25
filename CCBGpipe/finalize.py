@@ -44,30 +44,30 @@ for i in mydir:
     os.chdir(i)
     print (os.getcwd())
     comm='trimOverlapseq.py conseqs.fasta'
-    #print (comm)
+    print (comm)
     subprocess.getoutput(comm)
     comm='fixstart.py trimmedseqs.fa'
     print (comm)
     stdout=subprocess.getoutput(comm)
     print (stdout)
     comm='renamefa.py startfixed.fa '+outfile
-    #print (comm)
+    print (comm)
     subprocess.getoutput(comm)
     comm='minimap2 -x map-ont -a -t 32 '+outfile+' reads.fastq | samtools view -T '+outfile+' -bS - | samtools sort -T long.bwa -o long.bam -'
-    #print (comm)
+    print (comm)
     subprocess.getoutput(comm)
     comm='samtools index long.bam'
-    #print (comm)
+    print (comm)
     subprocess.getoutput(comm)
     if '_' in i:
         i=i.split('_')[0]
     
     os.mkdir(os.path.join(outpath,i))
     comm='cp {0} {1}/{2}/'.format(outfile,outpath,i)
-    #print (comm)
+    print (comm)
     subprocess.getoutput(comm)
     comm='cp long.bam* {0}/{1}/'.format(outpath,i)
-    #print (comm)
+    print (comm)
     subprocess.getoutput(comm)
 
     comm='cp reads.fastq {0}/{1}'.format(outpath,i)
