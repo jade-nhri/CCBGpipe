@@ -66,7 +66,7 @@ for i in sorted(mydir):
     comm='cat {0}/fastq_runid_*.fastq > {0}/{0}.fastq'.format(i)
     print (comm)
     stdout=subprocess.getoutput(comm)
-    comm='cp {0}/{0}.fastq {1}/{0}/joinedreads.fastq'.format(i,outdir)
+    comm='mv {0}/{0}.fastq {1}/{0}/joinedreads.fastq'.format(i,outdir)
     print (comm)
     stdout=subprocess.getoutput(comm)
     print (stdout)
@@ -75,7 +75,9 @@ for i in sorted(mydir):
     comm='prerunmini.py'
     subprocess.getoutput(comm)
     os.chdir(wd)
-    comm='cp {0}/{0}.txt {1}/'.format(i,outdir)
-    print (comm)
-    stdout=subprocess.getoutput(comm)
-    print (stdout)
+    comm='mv {0}/{0}.txt {1}/'.format(i,outdir)
+    subprocess.getoutput(comm)
+    comm='mv {0}/{0}_readid.tsv {1}/{0}'.format(i,outdir)
+    subprocess.getoutput(comm)
+    
+    
