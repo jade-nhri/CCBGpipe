@@ -4,7 +4,7 @@ import subprocess
 import argparse
 
 parser = argparse.ArgumentParser(
-    prog='runConsensus.py',
+    prog='finalize.py',
     description='''Please run this in the Run folder!''')
 parser.add_argument('outpath', help='the path to output')
 args = parser.parse_args()
