@@ -116,7 +116,7 @@ Installation
 
 ``preprocess.py -b path-to-barcoding_summary.txt -s path-to-sequencing_summary.txt -o outpath (e.g., preprocess.py -b barcoding/barcoding_summay.txt -s guppy_out/sequencing_summary.txt -o outdir)``
 
-- To bin fast5 files into each barcode using filter_reads(https://github.com/nanoporetech/fast5_research)
+- To bin fast5 files into each barcode using filter_reads (https://github.com/nanoporetech/fast5_research)
 
 ``e.g. filter_reads --recursive --multi --workers 32 Fast5/ fast5/barcode01 outdir/barcode01/barcode01_readid.tsv``
 
