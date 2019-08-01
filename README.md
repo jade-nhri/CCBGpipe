@@ -75,7 +75,8 @@ Installation
  > * pyfastaq
 
 ## Usage
-- [To extract fastq and fast5 files using extract.py]
+- To extract fastq and fast5 files using extract.py
+
 ``extract.py path-to-raw_reads output (e.g., extract.py raw-reads albacore)``
 
 - [To create a Run folder and enter it]
