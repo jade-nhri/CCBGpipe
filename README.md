@@ -103,7 +103,21 @@ Installation
 
 ``finalize.py outpath (e.g., finalize.py ../results)``
 
+## Basecalling With Guppy instead of Albacore
+- To extract fastq files using guppy_bascaller
 
+``guppy_basecaller -i path-to-raw_reads -s outpath (e.g., guppy_basecaller -i Fast5 -s guppy_out)``
 
+- To de-multiplex
+
+``guppy_barcoder -i inpath -s outpath (e.g., guppy_barcoder -i guppy_out -s barcoding)``
+
+- To produce read_id lists for each barcode
+
+``preprocess.py -b path-to-barcoding_summary.txt -s path-to-sequencing_summary.txt -o outpath (e.g., preprocess.py -b barcoding/barcoding_summay.txt -s guppy_out/sequencing_summary.txt -o outdir)``
+
+- To bin fast5 files into each barcode using filter_reads(https://github.com/nanoporetech/fast5_research)
+
+``e.g. filter_reads --recursive --multi --workers 32 Fast5/ fast5/barcode01 outdir/barcode01/barcode01_readid.tsv``
 
 
