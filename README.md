@@ -74,27 +74,33 @@ Installation
  > * pandas
  > * pyfastaq
 
-## Usage
+## Quick usage
 - To extract fastq and fast5 files using extract.py
 
 ``extract.py path-to-raw_reads output (e.g., extract.py raw-reads albacore)``
 
-- [To create a Run folder and enter it]
+- To create a Run folder and enter it
+
 ``mkdir Run && cd Run``
 
-- [To get high-quality and long-length reads using runGetFastq.py]
+- To get high-quality and long-length reads using runGetFastq.py
+
 ``runGetFastq.py path-to-fast5 (e.g., runGetFastq.py ../albacore/fast5)``
 
-- [To get miniasm assemblies using runmini.py]
+- To get miniasm assemblies using runmini.py
+
 ``runmini.py``
 
-- [To run canu with the sampling strategy by using runAssembly.py]
+- To run canu with the sampling strategy by using runAssembly.py
+
 ``runAssembly.py``
 
-- [To run racon and nanopolish for consensus sequence generation using runConsensus.py]
+- To run racon and nanopolish for consensus sequence generation using runConsensus.py
+
 ``runConsensus.py path-to-fast5 (e.g., runConsensus.py ../albacore/fast5/)``
 
--[To get circular genomes by using finalize.py]
+- To get circular genomes by using finalize.py
+
 ``finalize.py outpath (e.g., finalize.py ../results)``
 
 
