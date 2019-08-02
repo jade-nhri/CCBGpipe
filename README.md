@@ -83,7 +83,7 @@ Installation
 
 ``mkdir Run && cd Run``
 
-- To get high-quality and long-length reads using runGetFastq.py
+- To get high-quality and long-length reads from joinedreads.fastq using runGetFastq.py
 
 ``runGetFastq.py path-to-fast5 (e.g., runGetFastq.py ../albacore/fast5)``
 
@@ -95,7 +95,7 @@ Installation
 
 ``runAssembly.py``
 
-- To run racon and nanopolish for consensus sequence generation using runConsensus.py
+- To run racon and nanopolish for consensus sequence generation using runConsensus.py with fast5 files
 
 ``runConsensus.py path-to-fast5 (e.g., runConsensus.py ../albacore/fast5/)``
 
