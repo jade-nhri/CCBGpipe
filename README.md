@@ -103,7 +103,7 @@ Installation
 
 ``finalize.py outpath (e.g., finalize.py ../results)``
 
-## Basecalling With Guppy instead of Albacore
+## Basecalling with Guppy instead of Albacore
 - To extract fastq files using guppy_bascaller
 
 ``guppy_basecaller -i path-to-raw_reads -s outpath (e.g., guppy_basecaller -i Fast5 -s guppy_out)``
