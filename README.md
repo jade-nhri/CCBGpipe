@@ -75,7 +75,7 @@ Installation
  > * pyfastaq
 
 ## Quick usage
-- To extract fastq (joinedreads.fastq) and fast5 files using extract.py. Joinedreads.fastq and fast5 files are produced in the directory (albacore/fast5/barcodeXX/).
+- To extract fastq (joinedreads.fastq) and fast5 files using extract.py. Joinedreads.fastq and fast5 files are both produced in the directory (outpath/fast5/barcodeXX/).
 
 ``extract.py path-to-raw_reads outpath (e.g., extract.py raw-reads albacore)``
 
