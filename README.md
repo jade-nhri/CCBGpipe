@@ -112,13 +112,27 @@ Installation
 
 ``guppy_barcoder -i inpath -s outpath (e.g., guppy_barcoder -i guppy_out -s barcoding)``
 
-- To produce read_id lists for each barcode
+- To produce read_id list and joinedreads.fastq for each barcode
 
 ``preprocess.py -b path-to-barcoding_summary.txt -s path-to-sequencing_summary.txt -o outpath (e.g., preprocess.py -b barcoding/barcoding_summay.txt -s guppy_out/sequencing_summary.txt -o outdir)``
 
 - To bin fast5 files into each barcode using filter_reads (a command from https://github.com/nanoporetech/fast5_research)
 
-``e.g. filter_reads --recursive --multi --workers 32 Fast5/ fast5/barcode01 outdir/barcode01/barcode01_readid.tsv``
+``e.g., filter_reads --recursive --multi --workers 32 Fast5/ fast5/barcode01 outdir/barcode01/barcode01_readid.tsv``
 
-- With the data produced by the above process, you can perform CCBGpipe by beginning with runGetFastq.py
+- With the data produced by the above process, you can perform CCBGpipe by beginning with creating a Run folder
+
+``mkdir Run && cd Run``
+
+``runGetFastq.py path-to-fast5 (e.g., runGetFastq.py ../outdir/)``
+
+``runmini.py``
+
+``runAssembly.py``
+
+``runConsensus.py path-to-fast5 (e.g., runConsensus.py ../fast5/)``
+
+``finalize.py outpath (e.g., finalize.py ../results)``
+
+
 
